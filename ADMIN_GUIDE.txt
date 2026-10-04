@@ -1,0 +1,29 @@
+D'ARK Web Studio — LIVE OWNER PANEL
+
+OWNER LOGIN
+Open: /admin.html
+Username: owner
+Initial password: DARK@2026#Owner
+
+IMPORTANT: Change the password after your first login using “Change Password”.
+
+LIVE EDITING
+1. Upload the complete ZIP to PHP hosting/server.
+2. Open /admin.html.
+3. Login as owner.
+4. Edit General, Testimonials, Projects, Services, or Team.
+5. Click “Save & Publish”.
+6. The public website reads the same server-side data, so changes become live for everyone after refresh. No file export is required.
+
+BACKEND
+- api.php = server-side API + session authentication + CSRF protection
+- config.php = owner account configuration
+- storage/site-data.json = live website content
+- storage/owner.json = owner password hash
+- storage/.htaccess blocks direct access to storage files on Apache
+
+HOSTING
+PHP 7.4+ recommended. No MySQL/SQLite is required. The server must allow PHP to write to the storage folder.
+
+SECURITY
+Use HTTPS on the live domain. Change the default password immediately after first login.
